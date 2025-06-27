@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "usart.h": "c",
+        "stdlib.h": "c",
+        "sc_system.h": "c",
+        "gpio.h": "c",
+        "adc.h": "c"
+    }
+}

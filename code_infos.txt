@@ -1,0 +1,3 @@
+total code size: 4228 Byte 
+	- 4220 Byte text (initialize)
+	- 8 Byte BSS (not initialize)

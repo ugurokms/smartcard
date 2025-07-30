@@ -2,14 +2,14 @@
 
 A demonstration operating system for smartcard applications running on STM32F051 microcontroller, featuring AES encryption with various countermeasures against side-channel attacks.
 
-## 🔧 Hardware
+## Hardware
 
 - **Target MCU**: STM32F051K8B6 (ARM Cortex-M0)
 - **Hardware Version**: SMARTCARD_HW_V3
 - **Memory**: 64KB Flash, 8KB RAM
 - **Architecture**: ARM Cortex-M0 with soft-float
 
-## 📋 Features
+## Features
 
 - **AES Encryption Implementations**:
   - Standard AES inverse operations (`aes_inv.c`)
@@ -24,10 +24,10 @@ A demonstration operating system for smartcard applications running on STM32F051
   - Hardware abstraction layer
   - Debug and programming scripts
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
-├── src/                    # Source code
+├── src/                   # Source code
 │   ├── main.c             # Main application entry point
 │   ├── sc_system.c        # Smartcard system functions
 │   ├── adc.c              # ADC driver implementation
@@ -47,7 +47,7 @@ A demonstration operating system for smartcard applications running on STM32F051
 └── DEVELOPMENT.md         # Development guide
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -105,7 +105,7 @@ A demonstration operating system for smartcard applications running on STM32F051
    ./scripts/gdb_flash.sh
    ```
 
-## 🔒 Security Features
+## Security Features
 
 This project implements several countermeasures against side-channel attacks:
 
@@ -119,7 +119,7 @@ This project implements several countermeasures against side-channel attacks:
 - Balanced branching structures
 - Uniform execution patterns
 
-## 📊 Analysis Tools
+## Analysis Tools
 
 The project includes various analysis screenshots showing:
 - AES encryption speed comparisons
@@ -127,42 +127,11 @@ The project includes various analysis screenshots showing:
 - Communication protocol analysis
 - Attack resistance measurements
 
-## 🛠️ Development
-
-### Build Configuration
-- **Optimization**: `-Og` (debug optimization)
-- **C Standard**: C99
-- **Architecture**: ARM Cortex-M0 with soft-float
-- **Linker Script**: Auto-generated for STM32F051K8B6
-
-### Memory Usage
+## Memory Usage
 Current build statistics:
 - **Code Size**: ~4.2KB
 - **Data (BSS)**: 8 bytes
 - **Available Flash**: 64KB
 - **Available RAM**: 8KB
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📜 License
-
-This project is based on LibOpenCM3 which is licensed under the GNU Lesser General Public License v3.0. See the `libopencm3/COPYING*` files for details.
-
-## 🔗 Dependencies
-
-- [LibOpenCM3](https://github.com/libopencm3/libopencm3) - Open source ARM Cortex-M microcontroller library
-- ARM GCC Toolchain
-- OpenOCD - Open On-Chip Debugger
-
-## 📞 Contact
-
-For questions and support, please open an issue on GitHub.
-
----
 **Note**: This is a research and educational project focused on secure video streaming using AES with smartcard-based key management. It includes DPA-resistant AES implementations (masking, shuffling) to protect against side-channel attacks and enables on-the-fly decryption of encrypted video data only for authorized users. When implementing cryptographic functions in production environments, ensure proper security review and testing.

@@ -41,9 +41,10 @@ A demonstration operating system for smartcard applications running on STM32F051
 │   ├── openocd.sh         # OpenOCD startup script
 │   └── openocd_flash.sh   # OpenOCD flash programming script
 ├── libopencm3/            # LibOpenCM3 library (submodule)
+├── docs/                  # Documentation and analysis images
 ├── Makefile               # Build configuration
 ├── rules.mk               # Make rules for LibOpenCM3
-└── *.png                  # Analysis screenshots and documentation
+└── DEVELOPMENT.md         # Development guide
 ```
 
 ## 🚀 Getting Started
@@ -164,4 +165,4 @@ This project is based on LibOpenCM3 which is licensed under the GNU Lesser Gener
 For questions and support, please open an issue on GitHub.
 
 ---
-**Note**: This is a research and educational project. When implementing cryptographic functions in production environments, ensure proper security review and testing.
+**Note**: This is a research and educational project focused on secure video streaming using AES with smartcard-based key management. It includes DPA-resistant AES implementations (masking, shuffling) to protect against side-channel attacks and enables on-the-fly decryption of encrypted video data only for authorized users. When implementing cryptographic functions in production environments, ensure proper security review and testing.

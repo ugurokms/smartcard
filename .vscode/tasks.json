@@ -1,0 +1,57 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Smartcard Project",
+			"type": "shell",
+			"command": "make",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Clean Build",
+			"type": "shell",
+			"command": "make",
+			"args": ["clean"],
+			"group": "build",
+			"isBackground": false
+		},
+		{
+			"label": "Build LibOpenCM3",
+			"type": "shell",
+			"command": "make",
+			"args": ["-j4"],
+			"options": {
+				"cwd": "${workspaceFolder}/libopencm3"
+			},
+			"group": "build",
+			"isBackground": false,
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			}
+		},
+		{
+			"label": "Flash Firmware",
+			"type": "shell",
+			"command": "./scripts/openocd_flash.sh",
+			"group": "build",
+			"isBackground": false,
+			"dependsOn": "Build Smartcard Project",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			}
+		}
+	]
+}

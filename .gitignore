@@ -1,1 +1,16 @@
-libopencm3/
+# Build artifacts
+bin/
+build/
+*.o
+*.d
+*.elf
+*.bin
+*.map
+*.lst
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/settings.json
